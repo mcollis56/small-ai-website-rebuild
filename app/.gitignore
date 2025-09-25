@@ -1,0 +1,22 @@
+cat > .gitignore << 'EOF'
+# Node / Next
+node_modules/
+.next/
+out/
+dist/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env and local
+.env*
+!.env.example
+
+# OS
+.DS_Store
+
+# Archives and big local folders
+_archive-old-site/
+small-ai.com-master with massive folder/
+EOF

@@ -1,0 +1,12 @@
+
+# Dependencies
+/node_modules
+/.next/
+.DS_Store
+
+# Archives - IMPORTANT
+/old-site-archive/
+/old-site-archive-2/
+/_archive-old-site/
+/small-ai.com-master with massive folder/
+
