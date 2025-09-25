@@ -70,3 +70,4 @@ npm run start
 ## Contact
 
 For any inquiries, please contact us at info@small-ai.com# Homepage setup
+# Homepage setup
