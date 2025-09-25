@@ -1,56 +1,54 @@
-⏺ export default function HeroSection() {
-    return (
-      <section className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 
-  sm:text-6xl">
-              AI Made Simple for{" "}
-              <span className="text-blue-600">Small Businesses</span>
-            </h1>
-            <p className="mt-6 text-xl leading-8 text-gray-600">
-              Save time, save money, and stay ahead without the headache. No
-   tech jargon — just solutions that work for your business.
-            </p>
-
-            {/* Value Propositions */}
-            <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
-              <div className="text-center">
-                <div className="mx-auto h-12 w-12 bg-blue-100 rounded-lg 
-  flex items-center justify-center mb-4">
-                  <span className="text-blue-600 font-bold 
-  text-lg">⏰</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">Save
-  Time</h3>
-                <p className="mt-2 text-gray-600">Automate repetitive
-  tasks</p>
-              </div>
-              <div className="text-center">
-                <div className="mx-auto h-12 w-12 bg-green-100 rounded-lg 
-  flex items-center justify-center mb-4">
-                  <span className="text-green-600 font-bold 
-  text-lg">💰</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">Save
-  Money</h3>
-                <p className="mt-2 text-gray-600">Cut operational costs</p>
-              </div>
-              <div className="text-center">
-                <div className="mx-auto h-12 w-12 bg-purple-100 rounded-lg 
-  flex items-center justify-center mb-4">
-                  <span className="text-purple-600 font-bold 
-  text-lg">🚀</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">Stay
-  Ahead</h3>
-                <p className="mt-2 text-gray-600">Keep competitive edge</p>
-              </div>
-            </div>
-          </div>
+export default function HeroSection() {
+  return (
+    <section className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-indigo-600">AI Made Simple</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            AI Made Simple for Small Businesses
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Save time, save money, and stay ahead of the competition. We provide practical, easy-to-understand AI tools that deliver real results for your business.
+          </p>
         </div>
-      </section>
-    );
-  }
-
-──────
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
+            <div className="relative pl-16">
+              <dt className="text-base font-semibold leading-7 text-gray-900">
+                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <span role="img" aria-label="clock">⏰</span>
+                </div>
+                Save Time
+              </dt>
+              <dd className="mt-2 text-base leading-7 text-gray-600">
+                Automate repetitive tasks and free up your team to focus on what matters most.
+              </dd>
+            </div>
+            <div className="relative pl-16">
+              <dt className="text-base font-semibold leading-7 text-gray-900">
+                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <span role="img" aria-label="money">💰</span>
+                </div>
+                Save Money
+              </dt>
+              <dd className="mt-2 text-base leading-7 text-gray-600">
+                Reduce operational costs and increase efficiency with intelligent automation.
+              </dd>
+            </div>
+            <div className="relative pl-16">
+              <dt className="text-base font-semibold leading-7 text-gray-900">
+                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <span role="img" aria-label="rocket">🚀</span>
+                </div>
+                Stay Ahead
+              </dt>
+              <dd className="mt-2 text-base leading-7 text-gray-600">
+                Leverage cutting-edge AI to gain a competitive advantage in your market.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  );
+}
