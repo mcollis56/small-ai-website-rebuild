@@ -1,4 +1,4 @@
-import CalcomButton from '@/components/CalcomButton';
+import CalcomButton from '@/app/components/CalcomButton';
 
 const services = [
   {
