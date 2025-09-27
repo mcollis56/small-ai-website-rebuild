@@ -1,4 +1,4 @@
-import BookButton from "./BookButton";
+import CalcomButton from '@/components/CalcomButton';
 
 const services = [
   {
@@ -40,7 +40,7 @@ export default function ServicesPreview() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Choose Your AI Journey
+            Our Services
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             Simple, transparent pricing for businesses ready to embrace AI
@@ -86,19 +86,13 @@ export default function ServicesPreview() {
 
               <div className="mt-8">
                 {service.popular ? (
-                  <button
-                    data-cal-link="mark-s28jyk/book-a-discovery-call"
-                    className="w-full bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors"
-                  >
-                    Get Started
-                  </button>
+                  <div className="w-full bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors inline-block text-center">
+                    <CalcomButton buttonText="Get Started" />
+                  </div>
                 ) : (
-                  <button
-                    data-cal-link="mark-s28jyk/book-a-discovery-call"
-                    className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-                  >
-                    Get Started
-                  </button>
+                  <div className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors inline-block text-center">
+                    <CalcomButton buttonText="Get Started" />
+                  </div>
                 )}
               </div>
             </div>
