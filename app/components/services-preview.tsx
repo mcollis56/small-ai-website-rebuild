@@ -86,13 +86,12 @@ export default function ServicesPreview() {
 
               <div className="mt-8">
                 {service.popular ? (
-                  <div className="w-full bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors inline-block text-center">
-                    <CalcomButton buttonText="Get Started" />
-                  </div>
+                  <CalcomButton
+                    buttonText="Get Started"
+                    buttonClass="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-indigo-600 shadow-sm ring-1 ring-inset ring-indigo-600 hover:bg-indigo-50"
+                  />
                 ) : (
-                  <div className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors inline-block text-center">
-                    <CalcomButton buttonText="Get Started" />
-                  </div>
+                  <CalcomButton buttonText="Get Started" />
                 )}
               </div>
             </div>
