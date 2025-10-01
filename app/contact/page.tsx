@@ -45,7 +45,7 @@ export default function ContactPage() {
                   <li>• No sales pressure</li>
                 </ul>
                 <Button
-                  onClick={() => openCalPopup('https://cal.com/mark-s28jyk/discovery-call')}
+                  onClick={() => openCalPopup('mark-s28jyk/discovery-call')}
                   className="btn-primary w-full"
                 >
                   Book Discovery Call
@@ -164,7 +164,7 @@ export default function ContactPage() {
             The best way to start is with a conversation. Book your free discovery call today.
           </p>
           <Button
-            onClick={() => openCalPopup('https://cal.com/mark-s28jyk/discovery-call')}
+            onClick={() => openCalPopup('mark-s28jyk/discovery-call')}
             className="btn-primary"
             size="lg"
           >

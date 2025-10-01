@@ -116,7 +116,7 @@ export default function AboutPage() {
             Let's have a conversation about how AI can work for your specific business needs.
           </p>
           <Button
-            onClick={() => openCalPopup('https://cal.com/mark-s28jyk/discovery-call')}
+            onClick={() => openCalPopup('mark-s28jyk/discovery-call')}
             className="btn-primary"
             size="lg"
           >
