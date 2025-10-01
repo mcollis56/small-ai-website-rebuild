@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/app/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { useCal } from "@/hooks/use-cal";
 
@@ -49,7 +49,7 @@ export default function AISolutionFinderPage() {
               </ul>
 
               <Button
-                onClick={() => openCalPopup('https://cal.com/mark-s28jyk/discovery-call')}
+                onClick={() => openCalPopup('mark-s28jyk/discovery-call')}
                 className="btn-primary shadow-lg text-lg px-8 py-4"
               >
                 Book Your Free Discovery Call

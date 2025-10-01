@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/app/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/components/ui/card";
 import { Calendar, Mail, MessageSquare, Clock } from "lucide-react";
 import { useCal } from "@/hooks/use-cal";
 
@@ -45,7 +45,7 @@ export default function ContactPage() {
                   <li>• No sales pressure</li>
                 </ul>
                 <Button
-                  onClick={() => openCalPopup('https://cal.com/mark-s28jyk/discovery-call')}
+                  onClick={() => openCalPopup('mark-s28jyk/discovery-call')}
                   className="btn-primary w-full"
                 >
                   Book Discovery Call
@@ -164,7 +164,7 @@ export default function ContactPage() {
             The best way to start is with a conversation. Book your free discovery call today.
           </p>
           <Button
-            onClick={() => openCalPopup('https://cal.com/mark-s28jyk/discovery-call')}
+            onClick={() => openCalPopup('mark-s28jyk/discovery-call')}
             className="btn-primary"
             size="lg"
           >

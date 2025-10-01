@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/app/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/components/ui/card";
 import { CheckCircle, Users, Target, Zap } from "lucide-react";
 import { useCal } from "@/hooks/use-cal";
 
@@ -116,7 +116,7 @@ export default function AboutPage() {
             Let's have a conversation about how AI can work for your specific business needs.
           </p>
           <Button
-            onClick={() => openCalPopup('https://cal.com/mark-s28jyk/discovery-call')}
+            onClick={() => openCalPopup('mark-s28jyk/discovery-call')}
             className="btn-primary"
             size="lg"
           >
