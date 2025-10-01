@@ -28,6 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <script src="https://cal.com/embed.js" async></script>
+      </head>
       <body className={`${inter.variable} ${inria.variable} font-sans`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"

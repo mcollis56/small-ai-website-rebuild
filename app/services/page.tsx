@@ -26,7 +26,7 @@ const services = [
     description: "A 2-hour hands-on workshop to get you and your team up to speed with essential AI tools and strategies.",
     features: ["Live 2-hour session", "Team training for up to 5 people", "Q&A session", "Follow-up resources"],
     price: "$299",
-    link: "https://cal.com/mark-s28jyk/ai-basics-workshop",
+    link: "mark-s28jyk/ai-basics-workshop",
     popular: true,
   },
   {
@@ -34,7 +34,7 @@ const services = [
     description: "A custom AI agent built specifically for your business needs, from customer service to data analysis.",
     features: ["Custom AI development", "Integration support", "Training & documentation", "30-day support"],
     price: "$299",
-    link: "https://cal.com/mark-s28jyk/purpose-built-agent",
+    link: "mark-s28jyk/purpose-built-agent",
     popular: false,
   },
   {
@@ -42,7 +42,7 @@ const services = [
     description: "A comprehensive audit of your business processes to identify the best opportunities for AI integration.",
     features: ["Full business analysis", "AI opportunity mapping", "Implementation roadmap", "ROI projections"],
     price: "$499",
-    link: "https://cal.com/mark-s28jyk/ai-audit-consultation",
+    link: "mark-s28jyk/ai-audit-consultation",
     popular: false,
   },
 ];
