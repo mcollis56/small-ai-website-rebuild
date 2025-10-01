@@ -49,7 +49,7 @@ export default function AISolutionFinderPage() {
               </ul>
 
               <Button
-                onClick={() => openCalPopup('https://cal.com/mark-s28jyk/discovery-call')}
+                onClick={() => openCalPopup('mark-s28jyk/discovery-call')}
                 className="btn-primary shadow-lg text-lg px-8 py-4"
               >
                 Book Your Free Discovery Call
