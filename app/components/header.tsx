@@ -1,4 +1,4 @@
-import CalcomButton from '@/components/CalcomButton';
+import CalcomButton from './CalcomButton';
 
 export default function Header() {
   return (
