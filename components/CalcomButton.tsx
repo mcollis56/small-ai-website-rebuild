@@ -12,7 +12,18 @@ export default function CalcomButton({
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({"namespace":"30min"});
-      cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+      cal("ui", {
+        "cssVarsPerTheme": {
+          "light": {
+            "cal-brand": "#000000"
+          },
+          "dark": {
+            "cal-brand": "#000000"
+          }
+        },
+        "hideEventTypeDetails": false,
+        "layout": "month_view"
+      });
     })();
   }, []);
 
