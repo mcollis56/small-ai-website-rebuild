@@ -23,9 +23,10 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./app/*"
-      ]
+      "@/components/*": ["./app/components/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/*": ["./app/*"]
     }
   },
   "include": [
