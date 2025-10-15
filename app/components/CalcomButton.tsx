@@ -1,5 +1,5 @@
 'use client';
-import { CalcomEmbed } from "@calcom/embed-react";
+import CalcomEmbed from "@calcom/embed-react";
 
 export default function CalcomButton({
   buttonText,
