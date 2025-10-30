@@ -2,6 +2,7 @@
 'use client';
 
 import ContactForm from '@/app/components/contact-form';
+import CalcomButton from '@/app/components/CalcomButton';
 import { Mail, MapPin, Clock, Instagram, Calendar, ArrowRight } from 'lucide-react';
 
 const ContactPage = () => {
@@ -84,15 +85,13 @@ const ContactPage = () => {
                   <h4 className="font-semibold text-[#0D0D0D]">Free Consultation</h4>
                   <p className="text-sm text-gray-600">30 minutes • Virtual or In-person</p>
                 </div>
-                <button
-                  className="bg-[#0D0D0D] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#0D0D0D]/90 transition-colors flex items-center space-x-2"
-                  data-cal-namespace=""
-                  data-cal-link="mark-s28jyk/book-a-discovery-call"
-                  data-cal-config='{"layout":"month_view"}'
-                >
-                  <span>Book Now</span>
-                  <ArrowRight size={16} />
-                </button>
+                <CalcomButton
+                  buttonText="Book Now"
+                  buttonClass="bg-[#0D0D0D] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#0D0D0D]/90 transition-colors flex items-center space-x-2"
+                  calLink="mark-s28jyk/book-a-discovery-call"
+                  calNamespace=""
+                  calConfig='{"layout":"month_view"}'
+                />
               </div>
 
               <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
@@ -100,16 +99,13 @@ const ContactPage = () => {
                   <h4 className="font-semibold text-[#0D0D0D]">AI Readiness Assessment</h4>
                   <p className="text-sm text-gray-600">45 minutes • Comprehensive review</p>
                 </div>
-                <button
-                  className="text-[#0D0D0D] px-4 py-2 rounded-lg font-medium transition-colors flex items-center space-x-2"
-                  style={{ backgroundColor: '#c96a3b' }}
-                  data-cal-namespace=""
-                  data-cal-link="mark-s28jyk/book-a-discovery-call"
-                  data-cal-config='{"layout":"month_view"}'
-                >
-                  <span>Book Now</span>
-                  <ArrowRight size={16} />
-                </button>
+                <CalcomButton
+                  buttonText="Book Now"
+                  buttonClass="bg-[#c96a3b] text-[#0D0D0D] px-4 py-2 rounded-lg font-medium transition-colors flex items-center space-x-2"
+                  calLink="mark-s28jyk/book-a-discovery-call"
+                  calNamespace=""
+                  calConfig='{"layout":"month_view"}'
+                />
               </div>
             </div>
 
