@@ -80,10 +80,10 @@ const HeroSection = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#services" className="btn-primary inline-flex items-center space-x-2">
-                <span>Explore AI Services</span>
+              <Link href="/resources" className="btn-primary inline-flex items-center space-x-2">
+                <span>Explore AI Kits</span>
                 <ArrowRight size={20} />
-              </a>
+              </Link>
 
               <Link href="/contact" className="btn-outline">
                 Book Free Consultation
