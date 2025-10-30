@@ -22,7 +22,6 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
     { name: 'AI Solution Finder', href: '/ai-solution-finder' },
     { name: 'Chat', href: '/chat' },
     { name: 'Resources', href: '/resources' },
