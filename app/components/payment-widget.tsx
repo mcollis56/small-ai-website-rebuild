@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CreditCard, X, Check, Lock } from 'lucide-react';
+import { CreditCard, X, Lock } from 'lucide-react';
 
 interface PaymentWidgetProps {
   isOpen: boolean;
@@ -53,9 +53,10 @@ const PaymentWidget: React.FC<PaymentWidgetProps> = ({ isOpen, onClose, service 
           </div>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+            className="p-2 hover:bg-gray-100 rounded-full transition-colors group"
+            aria-label="Close payment modal"
           >
-            <X size={24} />
+            <X size={24} className="text-gray-600 group-hover:text-[#0D0D0D]" />
           </button>
         </div>
 
