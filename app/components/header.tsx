@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import CalcomButton from '@/app/components/CalcomButton';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,14 +58,12 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button 
-              className="btn-primary"
-              data-cal-namespace=""
-              data-cal-link="mark-s28jyk/book-a-discovery-call"
-              data-cal-config='{"layout":"month_view"}'
-            >
-              Book Free Consultation
-            </button>
+            <CalcomButton
+              buttonText="Book Free Consultation"
+              buttonClass="btn-primary"
+              calLink="mark-s28jyk/book-a-discovery-call"
+              calConfig='{"layout":"month_view"}'
+            />
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,15 +94,12 @@ const Header = () => {
                 </Link>
               ))}
               <div className="pt-4">
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="btn-primary w-full text-center block"
-                  data-cal-namespace=""
-                  data-cal-link="mark-s28jyk/book-a-discovery-call"
-                  data-cal-config='{"layout":"month_view"}'
-                >
-                  Book Free Consultation
-                </button>
+                <CalcomButton
+                  buttonText="Book Free Consultation"
+                  buttonClass="btn-primary w-full text-center block"
+                  calLink="mark-s28jyk/book-a-discovery-call"
+                  calConfig='{"layout":"month_view"}'
+                />
               </div>
             </nav>
           </div>
