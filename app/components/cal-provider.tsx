@@ -5,6 +5,14 @@ import { useEffect } from 'react';
 import Script from 'next/script';
 
 export default function CalProvider({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    // Initialize Cal.com when the script is ready
+    if (typeof window !== 'undefined' && (window as any).Cal) {
+      (window as any).Cal('init', { origin: 'https://cal.com' });
+      console.log('Cal.com initialized');
+    }
+  }, []);
+
   return (
     <>
       <Script
@@ -15,7 +23,8 @@ export default function CalProvider({ children }: { children: React.ReactNode })
           console.log('Cal.com script loaded successfully');
           // Initialize Cal.com after script loads
           if (typeof window !== 'undefined' && (window as any).Cal) {
-            console.log('Cal object available');
+            (window as any).Cal('init', { origin: 'https://cal.com' });
+            console.log('Cal object available and initialized');
           }
         }}
         onError={(e) => {
