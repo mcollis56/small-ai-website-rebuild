@@ -3,7 +3,7 @@
 
 import ContactForm from '@/app/components/contact-form';
 import CalcomButton from '@/app/components/CalcomButton';
-import { Mail, MapPin, Clock, Instagram, Calendar, ArrowRight } from 'lucide-react';
+import { Mail, MapPin, Clock, Instagram, Calendar } from 'lucide-react';
 
 const ContactPage = () => {
 
@@ -89,7 +89,6 @@ const ContactPage = () => {
                   buttonText="Book Now"
                   buttonClass="bg-[#0D0D0D] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#0D0D0D]/90 transition-colors flex items-center space-x-2"
                   calLink="mark-s28jyk/book-a-discovery-call"
-                  calNamespace=""
                   calConfig='{"layout":"month_view"}'
                 />
               </div>
@@ -103,7 +102,6 @@ const ContactPage = () => {
                   buttonText="Book Now"
                   buttonClass="bg-[#c96a3b] text-[#0D0D0D] px-4 py-2 rounded-lg font-medium transition-colors flex items-center space-x-2"
                   calLink="mark-s28jyk/book-a-discovery-call"
-                  calNamespace=""
                   calConfig='{"layout":"month_view"}'
                 />
               </div>
