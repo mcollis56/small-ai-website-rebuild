@@ -6,8 +6,6 @@ import Image from 'next/image';
 import PaymentWidget from './payment-widget';
 import {
   Bot,
-  MessageSquare,
-  PenTool,
   Search,
   Check,
   ArrowRight,
@@ -20,7 +18,6 @@ import {
 } from 'lucide-react';
 
 const ServicesPreview = () => {
-  const [selectedService, setSelectedService] = useState<string | null>(null);
   const [showPayment, setShowPayment] = useState(false);
   const [currentPaymentService, setCurrentPaymentService] = useState<any>(null);
 
@@ -115,7 +112,7 @@ const ServicesPreview = () => {
   };
 
   return (
-    <div className="py-20 bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A]">
+    <div id="services" className="py-20 bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A]">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
