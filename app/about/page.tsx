@@ -76,8 +76,8 @@ const AboutPage = () => {
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-80 aspect-[3/4] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/images/mark-collis-portrait.jpg"
-                alt="Mark Collis - AI Consultant for Small Businesses Action Figure"
+                src="/images/mark-action-figure.jpg"
+                alt="Mark Collis AI Action Figure"
                 fill
                 className="object-contain bg-white"
               />
