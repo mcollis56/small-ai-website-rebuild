@@ -3,14 +3,14 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import PaymentWidget from '../components/payment-widget';
-import { 
-  Bot, 
-  MessageSquare, 
-  PenTool, 
-  Search, 
-  Check, 
-  ArrowRight, 
+import PaymentWidget from './payment-widget';
+import {
+  Bot,
+  MessageSquare,
+  PenTool,
+  Search,
+  Check,
+  ArrowRight,
   Calendar,
   CreditCard,
   Clock,
@@ -19,21 +19,38 @@ import {
   Zap
 } from 'lucide-react';
 
-const ServicesPage = () => {
+const ServicesPreview = () => {
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [showPayment, setShowPayment] = useState(false);
   const [currentPaymentService, setCurrentPaymentService] = useState<any>(null);
+
+  const handleBooking = () => {
+    // Try to open Cal.com modal programmatically
+    if (typeof window !== 'undefined') {
+      const Cal = (window as any).Cal;
+      if (Cal) {
+        Cal('openModal', {
+          calLink: 'mark-s28jyk/book-a-discovery-call',
+          config: { layout: 'month_view' }
+        });
+      } else {
+        console.error('Cal.com not loaded');
+        // Fallback: open in new window
+        window.open('https://cal.com/mark-s28jyk/book-a-discovery-call', '_blank');
+      }
+    }
+  };
 
   const services = [
     {
       id: 'ai-basics',
       icon: Bot,
-      title: 'AI Basics Workshop',
+      title: 'Online Tutorial',
       price: 99,
       duration: '2 hours',
       format: 'Online',
       image: 'https://static.vecteezy.com/system/resources/previews/030/196/779/large_2x/group-of-happy-diverse-business-people-professional-career-office-team-generative-ai-photo.jpg',
-      description: 'Online introduction to AI and LLMs (ChatGPT, Claude, DeepSeek) and how they can benefit your business.',
+      description: 'Online Tutorial on AI and LLMs (ChatGPT, Claude, DeepSeek) and how they can benefit your business.',
       features: [
         'Introduction to AI and machine learning concepts',
         'Overview of popular AI tools (ChatGPT, Claude, DeepSeek)',
@@ -106,7 +123,7 @@ const ServicesPage = () => {
             AI <span style={{ color: '#c96a3b' }}>Services</span>
           </h1>
           <p className="text-xl text-[#BDBDBD] max-w-3xl mx-auto">
-            Choose the perfect AI workshop or consultation to transform your business. 
+            Choose the perfect AI workshop or consultation to transform your business.
             All services include hands-on learning and practical implementation guidance.
           </p>
         </div>
@@ -180,18 +197,19 @@ const ServicesPage = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <button
-                    className="flex-1 bg-[#0D0D0D] text-white py-3 px-4 rounded-lg font-semibold hover:bg-[#0D0D0D]/90 transition-colors flex items-center justify-center space-x-2"
-                    data-cal-namespace=""
-                    data-cal-link="mark-s28jyk/book-a-discovery-call"
-                    data-cal-config='{"layout":"month_view"}'
-                  >
-                    <Calendar size={18} />
-                    <span>Book Now</span>
-                  </button>
+                  {service.id !== 'ai-basics' && (
+                    <button
+                      type="button"
+                      onClick={handleBooking}
+                      className="flex-1 bg-[#0D0D0D] text-white py-3 px-4 rounded-lg font-semibold hover:bg-[#0D0D0D]/90 transition-colors flex items-center justify-center space-x-2"
+                    >
+                      <Calendar size={18} />
+                      <span>Book Now</span>
+                    </button>
+                  )}
                   <button
                     onClick={() => handlePayment(service)}
-                    className="flex-1 text-[#0D0D0D] py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+                    className={`${service.id === 'ai-basics' ? 'w-full' : 'flex-1'} text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2`}
                     style={{ backgroundColor: '#c96a3b' }}
                   >
                     <CreditCard size={18} />
@@ -209,11 +227,11 @@ const ServicesPage = () => {
             Not Ready to Book? Start with Free Resources
           </h3>
           <p className="text-[#0D0D0D]/80 mb-6 max-w-2xl mx-auto">
-            Download our free guides and take the AI readiness quiz to discover 
+            Download our free guides and take the AI readiness quiz to discover
             which solutions are perfect for your business.
           </p>
-          <a 
-            href="/resources" 
+          <a
+            href="/resources"
             className="bg-[#0D0D0D] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#0D0D0D]/90 transition-colors inline-flex items-center space-x-2"
           >
             <span>Access Free Resources</span>
@@ -234,4 +252,4 @@ const ServicesPage = () => {
   );
 };
 
-export default ServicesPage;
+export default ServicesPreview;

@@ -49,15 +49,16 @@ const BookingSection = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                className="btn-primary"
+              <button
+                className="bg-[#0D0D0D] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#0D0D0D]/90 transition-colors flex items-center justify-center space-x-2"
                 data-cal-namespace=""
                 data-cal-link="mark-s28jyk/book-a-discovery-call"
                 data-cal-config='{"layout":"month_view"}'
               >
-                Book Free Consultation
+                <Calendar size={18} />
+                <span>Book Free Consultation</span>
               </button>
-              
+
               <Link href="/resources" className="btn-outline">
                 Download Free Guide
               </Link>
