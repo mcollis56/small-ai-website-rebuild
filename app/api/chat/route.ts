@@ -87,12 +87,13 @@ export async function POST(req: NextRequest) {
     const apiKey = process.env.OPENAI_API_KEY;
 
     if (!apiKey) {
-      console.log('No OpenAI API key found, using fallback responses');
+      console.error('⚠️ OPENAI_API_KEY environment variable not set - using fallback responses');
+      console.log('To enable full AI responses, set OPENAI_API_KEY in Vercel environment variables');
       // Fallback response when no API key is configured
       return createFallbackResponse(messages);
     }
 
-    console.log('Using OpenAI API');
+    console.log('✓ Using OpenAI API with GPT-4-turbo');
     // Use OpenAI API
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
@@ -248,7 +249,7 @@ Mark will build a custom AI agent specifically for YOUR business challenge. This
 ✓ 60 days of support to refine and improve it
 
 Tell me about your business - what's taking up too much of your time? I can help you figure out if a custom agent would help!`;
-  } else if (lastMessage.includes('audit') || lastMessage.includes('consultation') || lastMessage.includes('in-person') || lastMessage.includes('strategy')) {
+  } else if (lastMessage.includes('audit') || lastMessage.includes('consultation') || lastMessage.includes('in-person') || lastMessage.includes('strategy') || lastMessage.includes('$499')) {
     response = `The **AI Audit & Consultation** ($499, 3-4 hours in-person) is Mark's most comprehensive service. Here's what makes it valuable:
 
 Mark visits your business in person (Avalon area) to:
