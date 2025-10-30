@@ -102,7 +102,7 @@ export async function POST(req: NextRequest) {
         'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'gpt-4-turbo-preview',
+        model: 'gpt-4o-mini',
         messages: [
           { role: 'system', content: SYSTEM_PROMPT },
           ...messages,
@@ -114,7 +114,10 @@ export async function POST(req: NextRequest) {
     });
 
     if (!response.ok) {
-      console.log('OpenAI API failed, falling back to local responses');
+      const errorText = await response.text();
+      console.error('OpenAI API failed with status:', response.status);
+      console.error('Error details:', errorText);
+      console.log('Falling back to local responses');
       return createFallbackResponse(messages);
     }
 
