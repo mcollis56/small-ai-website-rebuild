@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: AI Made Simple for Busy Small Businesses - AIAUDIT.BIZ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/module1.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-text">AIAUDIT.BIZ</div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="about.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="module-progress-bar">
+        <div class="module-progress-fill" id="progressBar"></div>
+    </div>
+
+    <!-- Module Header -->
+    <section class="module-hero">
+        <div class="container">
+            <h1>Module 1: AI Made Simple for Busy Small Businesses</h1>
+            <p class="module-subtitle">Learn AI basics in plain language—no tech background needed</p>
+            <div class="module-completion-status" id="moduleStatus">
+                <span class="status-icon">⏳</span>
+                <span class="status-text">In Progress</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Welcome Video -->
+    <section class="module-section" id="section-welcome" data-section="welcome">
+        <div class="container">
+            <h2 class="section-number">Welcome</h2>
+            <div class="video-container">
+                <video controls id="welcomeVideo">
+                    <source src="videos/baby intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="welcome-text">
+                <p class="large-text">Welcome. AI is simple. You type in words and get help back. This course keeps everything practical.</p>
+            </div>
+            <button class="btn btn-primary mark-complete-btn" data-section="welcome">Mark as Complete ✓</button>
+        </div>
+    </section>
+
+    <!-- Section 2: Lesson 1 - What AI Does -->
+    <section class="module-section" id="section-lesson1" data-section="lesson1">
+        <div class="container">
+            <h2 class="section-number">Lesson 1: What AI Does</h2>
+            
+            <div class="lesson-content">
+                <p class="intro-para">Think of AI as a very helpful assistant that lives in your computer or phone. When you type words and questions, it helps you write, think, and get things done faster.</p>
+                
+                <h3>Three Main AI Helpers</h3>
+                <div class="ai-tools-grid">
+                    <div class="tool-card">
+                        <h4>ChatGPT</h4>
+                        <p>Made by OpenAI. Great for writing messages, emails, and solving everyday business problems.</p>
+                    </div>
+                    <div class="tool-card">
+                        <h4>Claude</h4>
+                        <p>Made by Anthropic. Excellent for longer documents and detailed planning.</p>
+                    </div>
+                    <div class="tool-card">
+                        <h4>DeepSeek</h4>
+                        <p>A newer option that's fast and helpful for quick tasks.</p>
+                    </div>
+                </div>
+
+                <h3>Real Examples from Local Businesses</h3>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-icon">🔧</div>
+                        <h4>A Plumber Writing a Quote</h4>
+                        <p><strong>Before AI:</strong> Takes 30 minutes to type up a detailed quote with terms and conditions.</p>
+                        <p><strong>With AI:</strong> Types rough notes into ChatGPT: "Need quote for bathroom renovation, 3 days work, materials $2000, labour $180/hour." Gets a professional quote back in 30 seconds.</p>
+                        <p class="time-saved">Time saved: 28 minutes per quote</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-icon">💇</div>
+                        <h4>A Hairdresser Writing a Social Post</h4>
+                        <p><strong>Before AI:</strong> Stares at blank screen trying to think of something clever to post about their winter special.</p>
+                        <p><strong>With AI:</strong> Tells ChatGPT: "Write a friendly Instagram post about our winter hair treatment special, $80 instead of $120, keeps hair healthy in cold weather."</p>
+                        <p class="time-saved">Time saved: 15 minutes per post</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-icon">🧘</div>
+                        <h4>A Pilates Studio Writing Reminder Messages</h4>
+                        <p><strong>Before AI:</strong> Sends the same boring text reminder to all clients.</p>
+                        <p><strong>With AI:</strong> Asks ChatGPT: "Write 5 friendly reminder messages for pilates classes, make them encouraging and different from each other."</p>
+                        <p class="time-saved">Time saved: 20 minutes, plus clients respond better</p>
+                    </div>
+                </div>
+
+                <div class="key-takeaway">
+                    <h4>The Big Idea</h4>
+                    <p>AI doesn't replace you. It's like having a helpful assistant who never gets tired and is always ready to help with writing, planning, and organizing.</p>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary mark-complete-btn" data-section="lesson1">Mark Lesson 1 Complete ✓</button>
+        </div>
+    </section>
+
+    <!-- Section 3: Lesson 2 - Your First Prompt -->
+    <section class="module-section" id="section-lesson2" data-section="lesson2">
+        <div class="container">
+            <h2 class="section-number">Lesson 2: Your First Prompt</h2>
+            
+            <div class="video-container">
+                <video controls id="chatgptIntroVideo">
+                    <source src="videos/avatar intro to chatgpt.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="lesson-content">
+                <h3>How to Talk to AI (It's Easier Than You Think)</h3>
+                <p>A "prompt" is just the words you type into the AI. Think of it like giving instructions to a helpful employee.</p>
+
+                <div class="prompt-formula">
+                    <h4>Simple Prompt Formula</h4>
+                    <div class="formula-steps">
+                        <div class="formula-step">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h5>Tell the tool what you want</h5>
+                                <p>"Write an email..." or "Create a list of..." or "Help me explain..."</p>
+                            </div>
+                        </div>
+                        <div class="formula-step">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h5>Add context (the details)</h5>
+                                <p>Who is it for? What's the situation? Any specific details?</p>
+                            </div>
+                        </div>
+                        <div class="formula-step">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h5>Ask for a clear format</h5>
+                                <p>"Keep it short" or "Make it friendly" or "Use bullet points"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>3 Ready-to-Use Prompts (Copy and Try These Now)</h3>
+                <div class="ready-prompts">
+                    <div class="prompt-card">
+                        <div class="prompt-header">
+                            <span class="prompt-number">Prompt 1</span>
+                            <button class="copy-btn" data-prompt="prompt1">Copy</button>
+                        </div>
+                        <h4>Customer Follow-Up</h4>
+                        <div class="prompt-text" id="prompt1">
+Write a friendly follow-up email to a customer who came in last week. Thank them for their business, ask if everything was satisfactory, and invite them to come back. Keep it warm but professional. Make it 3-4 sentences.
+                        </div>
+                    </div>
+
+                    <div class="prompt-card">
+                        <div class="prompt-header">
+                            <span class="prompt-number">Prompt 2</span>
+                            <button class="copy-btn" data-prompt="prompt2">Copy</button>
+                        </div>
+                        <h4>Social Media Post</h4>
+                        <div class="prompt-text" id="prompt2">
+Create an Instagram post for my small business announcing our weekend opening hours. We're open Saturday 9am-3pm and Sunday 10am-2pm. Make it friendly and use 2-3 relevant emojis. Keep it short.
+                        </div>
+                    </div>
+
+                    <div class="prompt-card">
+                        <div class="prompt-header">
+                            <span class="prompt-number">Prompt 3</span>
+                            <button class="copy-btn" data-prompt="prompt3">Copy</button>
+                        </div>
+                        <h4>Professional Introduction</h4>
+                        <div class="prompt-text" id="prompt3">
+Write a brief introduction about my business for our website. We're a family-owned [YOUR BUSINESS TYPE] serving the Northern Beaches for [NUMBER] years. We focus on quality work and personal service. Make it warm and trustworthy, about 50 words.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tip">
+                    <h4>💡 Pro Tip</h4>
+                    <p>If the AI's first answer isn't quite right, just type "make it shorter" or "make it more friendly" or "add more details." You can have a conversation with it!</p>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary mark-complete-btn" data-section="lesson2">Mark Lesson 2 Complete ✓</button>
+        </div>
+    </section>
+
+    <!-- Section 4: Lesson 3 - Fix a Real Message -->
+    <section class="module-section" id="section-lesson3" data-section="lesson3">
+        <div class="container">
+            <h2 class="section-number">Lesson 3: Fix a Real Message</h2>
+            
+            <div class="video-container small-video">
+                <video controls id="emailVideo">
+                    <source src="videos/email.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="lesson-content">
+                <h3>Turn Rough Notes Into Professional Messages</h3>
+                <p>We all have those moments where we know what we want to say, but it comes out messy. AI is perfect for cleaning up your rough notes.</p>
+
+                <div class="example-transformation">
+                    <div class="before-after">
+                        <div class="before">
+                            <h4>❌ Your Rough Notes</h4>
+                            <p class="rough-text">"hey need to tell customer we can't come tuesday, maybe thursday, waiting on parts from supplier they said wed"</p>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="after">
+                            <h4>✅ AI's Clean Version</h4>
+                            <p class="clean-text">"Hi [Customer Name],<br><br>I wanted to reach out about our scheduled appointment for Tuesday. Unfortunately, we're waiting on some parts from our supplier that are expected to arrive Wednesday. Would Thursday work for you instead?<br><br>I apologize for any inconvenience and appreciate your understanding.<br><br>Best regards"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>The Magic Prompt for This</h3>
+                <div class="magic-prompt">
+                    <div class="prompt-text" id="magicPrompt">
+Take these rough notes and turn them into a clear, professional message to send to a customer: [PASTE YOUR ROUGH NOTES HERE]
+                    </div>
+                    <button class="copy-btn" data-prompt="magicPrompt">Copy This Prompt</button>
+                </div>
+
+                <h3>When to Use This</h3>
+                <ul class="use-cases">
+                    <li>🕐 <strong>You're in a hurry:</strong> Quick voice notes or jotted ideas that need polishing</li>
+                    <li>📧 <strong>Important emails:</strong> When you want to sound professional but don't have time to wordsmith</li>
+                    <li>😬 <strong>Awkward situations:</strong> Cancellations, delays, or difficult messages that need the right tone</li>
+                    <li>💼 <strong>Quotes and proposals:</strong> Turn bullet points into polished documents</li>
+                </ul>
+            </div>
+            
+            <button class="btn btn-primary mark-complete-btn" data-section="lesson3">Mark Lesson 3 Complete ✓</button>
+        </div>
+    </section>
+
+    <!-- Section 5: Interactive Task 1 - Message Rewriter -->
+    <section class="module-section interactive" id="section-task1" data-section="task1">
+        <div class="container">
+            <h2 class="section-number">Interactive Task 1: Try It Yourself</h2>
+            
+            <div class="interactive-task">
+                <h3>Paste Your Rough Message</h3>
+                <p>Type or paste a rough message below and watch it transform into something polished and professional.</p>
+                
+                <div class="task-input">
+                    <label for="roughMessage">Your Rough Notes:</label>
+                    <textarea id="roughMessage" rows="6" placeholder="Example: need tell customer running late traffic bad should be there 20 min sorry"></textarea>
+                </div>
+
+                <button class="btn btn-primary" id="rewriteBtn">Rewrite My Message ✨</button>
+
+                <div class="task-output" id="rewriteOutput" style="display: none;">
+                    <h4>✅ Your Professional Message:</h4>
+                    <div class="output-text" id="rewrittenText"></div>
+                    <button class="btn btn-secondary copy-result-btn">Copy Result</button>
+                </div>
+
+                <div class="task-complete-check" style="display: none;">
+                    <span class="check-icon">✓</span>
+                    <span>Task Complete!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Interactive Task 2 - Business AI Helpers -->
+    <section class="module-section interactive" id="section-task2" data-section="task2">
+        <div class="container">
+            <h2 class="section-number">Interactive Task 2: Discover Your AI Helpers</h2>
+            
+            <div class="interactive-task">
+                <h3>What AI Can Do for YOUR Business</h3>
+                <p>Select your business type below to see three specific ways AI can help you right now.</p>
+                
+                <div class="task-input">
+                    <label for="businessType">Choose Your Business Type:</label>
+                    <select id="businessType">
+                        <option value="">-- Select Your Business --</option>
+                        <option value="tradesperson">Tradesperson (plumber, electrician, carpenter)</option>
+                        <option value="beauty">Beauty & Wellness (hair, nails, massage, pilates)</option>
+                        <option value="retail">Retail Shop</option>
+                        <option value="cafe">Café or Restaurant</option>
+                        <option value="professional">Professional Services (accountant, lawyer, consultant)</option>
+                        <option value="home">Home Services (cleaning, gardening, pet care)</option>
+                        <option value="fitness">Fitness & Sports</option>
+                        <option value="creative">Creative Services (photography, design, marketing)</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" id="generateHelpersBtn">Show Me My AI Helpers 🚀</button>
+
+                <div class="task-output" id="helpersOutput" style="display: none;">
+                    <h4>✨ 3 AI Helpers for Your Business:</h4>
+                    <div class="helpers-grid" id="helpersGrid"></div>
+                </div>
+
+                <div class="task-complete-check" style="display: none;">
+                    <span class="check-icon">✓</span>
+                    <span>Task Complete!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Lesson 4 - What AI Cannot Do -->
+    <section class="module-section" id="section-lesson4" data-section="lesson4">
+        <div class="container">
+            <h2 class="section-number">Lesson 4: What AI Cannot Do</h2>
+            
+            <div class="lesson-content">
+                <h3>Important: You're Still the Boss</h3>
+                <p class="emphasis">AI is a powerful tool, but it's not perfect. Here's what you need to know to use it safely and effectively.</p>
+
+                <div class="limitations-grid">
+                    <div class="limitation-card">
+                        <div class="limitation-icon">👤</div>
+                        <h4>1. You Stay in Control</h4>
+                        <p><strong>AI suggests, you decide.</strong> Always read what the AI writes before sending it. It might sound good but miss your personal touch or get a detail wrong.</p>
+                        <p class="example-text"><em>Example: AI might write a professional email, but you know your customer prefers casual language. You can adjust it.</em></p>
+                    </div>
+
+                    <div class="limitation-card">
+                        <div class="limitation-icon">✓</div>
+                        <h4>2. Always Check Everything</h4>
+                        <p><strong>AI can make mistakes.</strong> It might get facts wrong, make up information, or misunderstand what you asked for.</p>
+                        <p class="example-text"><em>Example: If AI writes a quote with prices, double-check the numbers. If it mentions a date, confirm it's correct.</em></p>
+                    </div>
+
+                    <div class="limitation-card">
+                        <div class="limitation-icon">🔒</div>
+                        <h4>3. Keep Private Data Safe</h4>
+                        <p><strong>Don't put sensitive information into AI tools.</strong> No customer addresses, phone numbers, payment details, or private business information.</p>
+                        <div class="safe-unsafe">
+                            <div class="safe">
+                                <strong>✅ Safe:</strong> "Write an email to a customer about a delayed delivery"
+                            </div>
+                            <div class="unsafe">
+                                <strong>❌ Not Safe:</strong> "Write an email to John Smith at 123 Beach Road about his $5,000 invoice"
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="limitation-card">
+                        <div class="limitation-icon">🤝</div>
+                        <h4>4. It Can't Replace Human Touch</h4>
+                        <p><strong>AI doesn't understand feelings or relationships like you do.</strong> Use it for the boring stuff, but add your personal touch for important communications.</p>
+                        <p class="example-text"><em>Example: AI can draft a sympathy message, but you should add personal words that show you care.</em></p>
+                    </div>
+
+                    <div class="limitation-card">
+                        <div class="limitation-icon">⏰</div>
+                        <h4>5. It Doesn't Know Everything</h4>
+                        <p><strong>AI's knowledge has limits.</strong> It doesn't know about events after its training date, your specific business details, or your local area specifics.</p>
+                        <p class="example-text"><em>Example: It won't know about Northern Beaches council regulations or your business's actual opening hours unless you tell it.</em></p>
+                    </div>
+
+                    <div class="limitation-card">
+                        <div class="limitation-icon">⚖️</div>
+                        <h4>6. You're Responsible</h4>
+                        <p><strong>If something goes wrong, it's your responsibility.</strong> Don't blame the AI—you're the one who sent the message or made the decision.</p>
+                        <p class="example-text"><em>Think of it like spell-check: it helps, but you're still responsible for what you send.</em></p>
+                    </div>
+                </div>
+
+                <div class="golden-rule">
+                    <h4>🌟 The Golden Rule</h4>
+                    <p class="large-text">Use AI to save time on tasks that don't need a personal touch. Always add your own judgment, care, and personality before hitting send.</p>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary mark-complete-btn" data-section="lesson4">Mark Lesson 4 Complete ✓</button>
+        </div>
+    </section>
+
+    <!-- Section 8: Quiz -->
+    <section class="module-section quiz-section" id="section-quiz" data-section="quiz">
+        <div class="container">
+            <h2 class="section-number">Knowledge Check Quiz</h2>
+            
+            <div class="quiz-intro">
+                <p>Time to test what you've learned! You need to get <strong>3 out of 5 questions</strong> correct to complete this module.</p>
+                <p class="quiz-tip">💡 Take your time—you can retake the quiz if needed.</p>
+            </div>
+
+            <div class="quiz-container" id="quizContainer">
+                <!-- Question 1 -->
+                <div class="quiz-question" data-question="1">
+                    <h3>Question 1 of 5</h3>
+                    <p class="question-text">What is the best way to think about AI tools like ChatGPT?</p>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="a">
+                            <span>A super-smart computer that knows everything and never makes mistakes</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="b">
+                            <span>A helpful assistant that saves time but needs you to check its work</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="c">
+                            <span>A replacement for human workers that can do everything</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="d">
+                            <span>A complicated tool only for tech experts</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-question" data-question="2">
+                    <h3>Question 2 of 5</h3>
+                    <p class="question-text">Which of these should you NEVER put into an AI tool?</p>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="a">
+                            <span>"Write a friendly email to a customer about a delayed order"</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="b">
+                            <span>Customer names, addresses, and payment details</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="c">
+                            <span>"Create a social media post about our weekend special"</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="d">
+                            <span>"Help me write a quote for bathroom renovation work"</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-question" data-question="3">
+                    <h3>Question 3 of 5</h3>
+                    <p class="question-text">What are the three parts of a good AI prompt?</p>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="a">
+                            <span>Say please, use perfect grammar, write very long instructions</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="b">
+                            <span>Tell it what you want, add context (details), ask for a clear format</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="c">
+                            <span>Type fast, use abbreviations, keep it vague</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="d">
+                            <span>Use technical terms, write code, be very formal</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="quiz-question" data-question="4">
+                    <h3>Question 4 of 5</h3>
+                    <p class="question-text">True or False: If AI writes something for you, you should always read it and check it before using it.</p>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q4" value="a">
+                            <span>True - I'm responsible for anything I send or use</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q4" value="b">
+                            <span>False - AI is perfect and I can trust it completely</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="quiz-question" data-question="5">
+                    <h3>Question 5 of 5</h3>
+                    <p class="question-text">A plumber uses AI to help write quotes. What's the best use of AI for this?</p>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q5" value="a">
+                            <span>Let AI make up all the prices and details, then send it straight to the customer</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q5" value="b">
+                            <span>Give AI rough notes (3 days work, materials $2000, labour $180/hour) and let it format a professional quote, then check the numbers before sending</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q5" value="c">
+                            <span>Have AI call the customer and negotiate the price</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q5" value="d">
+                            <span>Don't use AI for quotes—it's too complicated</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="submitQuizBtn">Submit Quiz</button>
+
+                <div class="quiz-results" id="quizResults" style="display: none;">
+                    <div class="results-content"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Downloadable Template -->
+    <section class="module-section download-section" id="section-download" data-section="download">
+        <div class="container">
+            <h2 class="section-number">Your Free Resource</h2>
+            
+            <div class="download-card">
+                <div class="download-icon">📄</div>
+                <h3>Starter Prompts for Busy Small Businesses</h3>
+                <p class="download-description">A practical PDF with 15 ready-to-use prompts you can copy and paste right now:</p>
+                <ul class="download-features">
+                    <li>✓ 5 Message Prompts (emails, texts, letters)</li>
+                    <li>✓ 5 Customer Service Prompts (replies, follow-ups, thank yous)</li>
+                    <li>✓ 5 Marketing Prompts (social media, promotions, announcements)</li>
+                </ul>
+                <button class="btn btn-primary btn-large" id="downloadTemplateBtn">
+                    Download Your Free Template 📥
+                </button>
+                <p class="download-note">PDF will open in a new tab. Save it to your computer or phone for easy access!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Module Completion -->
+    <section class="module-section completion-section" id="section-completion">
+        <div class="container">
+            <div class="completion-content" id="completionContent">
+                <div class="incomplete-message">
+                    <h2>Almost There!</h2>
+                    <p>Complete all sections to unlock your AI Beginner badge and Module 2.</p>
+                    
+                    <div class="completion-checklist">
+                        <h3>Your Progress:</h3>
+                        <ul id="completionChecklist">
+                            <li data-check="welcome"><span class="check">☐</span> Watch welcome video</li>
+                            <li data-check="lesson1"><span class="check">☐</span> Complete Lesson 1</li>
+                            <li data-check="lesson2"><span class="check">☐</span> Complete Lesson 2</li>
+                            <li data-check="lesson3"><span class="check">☐</span> Complete Lesson 3</li>
+                            <li data-check="lesson4"><span class="check">☐</span> Complete Lesson 4</li>
+                            <li data-check="task1"><span class="check">☐</span> Complete Interactive Task 1</li>
+                            <li data-check="task2"><span class="check">☐</span> Complete Interactive Task 2</li>
+                            <li data-check="quiz"><span class="check">☐</span> Pass the quiz (3/5 correct)</li>
+                            <li data-check="download"><span class="check">☐</span> Download the template</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="complete-message" style="display: none;">
+                    <div class="badge-container">
+                        <div class="badge-earned">
+                            <div class="badge-icon">🏆</div>
+                            <h2>Congratulations!</h2>
+                            <div class="badge-name">AI Beginner</div>
+                        </div>
+                    </div>
+                    
+                    <p class="congrats-text">You've completed Module 1! You now understand what AI is, how to use it, and what to watch out for.</p>
+                    
+                    <div class="next-steps">
+                        <h3>What You've Learned:</h3>
+                        <ul>
+                            <li>✓ What AI tools are and how they work</li>
+                            <li>✓ How to write effective prompts</li>
+                            <li>✓ Real ways AI can save you time</li>
+                            <li>✓ Important safety and privacy practices</li>
+                            <li>✓ 15 ready-to-use prompts for your business</li>
+                        </ul>
+                    </div>
+
+                    <div class="module2-locked">
+                        <h3>🔒 Module 2: Coming Soon</h3>
+                        <p>Module 2 will dive deeper into practical AI applications for your specific business type. Check back soon or contact us to learn more!</p>
+                        <div class="cta-buttons">
+                            <a href="index.html" class="btn btn-primary">Back to Home</a>
+                            <a href="workshops.html" class="btn btn-secondary">Explore Workshops</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Completion Reinforcement -->
+    <div class="video-modal" id="videoCompleteModal" style="display: none;">
+        <div class="modal-content">
+            <video id="reinforcementVideo" style="display: none;">
+                <source src="videos/sounds good.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="workshops.html">Workshops</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Course Modules</h3>
+                    <ul>
+                        <li><a href="module1.html" class="active">Module 1: AI Basics</a></li>
+                        <li><span style="color: #999;">Module 2: Coming Soon</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 AIAUDIT.BIZ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/module1.js"></script>
+</body>
+</html>
