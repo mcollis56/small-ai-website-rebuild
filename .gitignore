@@ -10,3 +10,31 @@
 /_archive-old-site/
 /small-ai.com-master with massive folder/
 
+
+# Common build / cache / env files
+dist/
+build/
+/.parcel-cache/
+/.turbo/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Coverage
+coverage/
+
+# Large asset folders (adjust if you store assets in repo intentionally)
+public/uploads/
+media/
+
