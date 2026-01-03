@@ -1,0 +1,16 @@
+{
+  "name": "Small AI",
+  "short_name": "Small AI",
+  "description": "AI Solutions for Your Business",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0D0D",
+  "theme_color": "#FFE36E",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

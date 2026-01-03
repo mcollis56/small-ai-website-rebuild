@@ -26,7 +26,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="antialiased bg-[#0D0D0D]">
+<body className="antialiased bg-retro-bg text-retro-text">
         <CalProvider>
           <Header />
           <main className="min-h-screen pt-20">

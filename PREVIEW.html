@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>small-ai | AI Made Simple for Small Businesses - PREVIEW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0D0D0D;
+            color: #FDF5E6;
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+        }
+
+        .font-display {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(245, 230, 211, 0.2);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo-text {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #FDF5E6;
+        }
+
+        .nav {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-decoration: none;
+            color: rgba(245, 230, 211, 0.8);
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background: rgba(245, 230, 211, 0.1);
+            color: #FDF5E6;
+        }
+
+        .btn-primary {
+            background: #BFFF00;
+            color: #0D0D0D;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.8);
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.8);
+            transform: translate(2px, 2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 3.75rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.8);
+        }
+
+        .highlight {
+            color: #BFFF00;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: rgba(245, 230, 211, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .mascot {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+        }
+
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .value-card {
+            background: rgba(26, 26, 26, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .value-icon {
+            width: 56px;
+            height: 56px;
+            background: #BFFF00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.8);
+        }
+
+        .value-title {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-subtitle {
+            color: rgba(245, 230, 211, 0.7);
+            font-size: 0.875rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: linear-gradient(to bottom, #0D0D0D, #1a1a1a);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #F5E6D3;
+            color: #0D0D0D;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 6px 6px 0px 0px rgba(125,211,211,0.3);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 8px 8px 0px 0px rgba(191,255,0,0.3);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-price {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #7DD3D3;
+            font-weight: bold;
+        }
+
+        .btn-service {
+            width: 100%;
+            background: #BFFF00;
+            color: #0D0D0D;
+            padding: 1rem;
+            border-radius: 1rem;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.8);
+            transition: all 0.2s;
+        }
+
+        .btn-service:hover {
+            box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.8);
+            transform: translate(2px, 2px);
+        }
+
+        /* Footer */
+        footer {
+            background: #0D0D0D;
+            border-top: 2px solid rgba(245, 230, 211, 0.2);
+            padding: 3rem 0;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            color: rgba(245, 230, 211, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-title {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(245, 230, 211, 0.8);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #7DD3D3;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(245, 230, 211, 0.1);
+            color: rgba(245, 230, 211, 0.6);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .decorative-star {
+            position: absolute;
+            color: #BFFF00;
+            opacity: 0.2;
+            font-size: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-grid, .services-grid, .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .value-props {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                display: none;
+            }
+        }
+
+        .preview-banner {
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            background: #E07A5F;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            z-index: 1001;
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-banner">STATIC PREVIEW</div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="public/images/Mascot.png" alt="small-ai mascot" class="logo-img">
+                    <span class="logo-text">small-ai</span>
+                </a>
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#services" class="nav-link">AI Services</a></li>
+                        <li><a href="#" class="nav-link">Resources</a></li>
+                        <li><a href="#" class="nav-link">About</a></li>
+                        <li><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="btn-primary">Book Free Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="decorative-star" style="top: 20%; left: 10%;">★</span>
+        <span class="decorative-star" style="top: 15%; right: 10%;">✦</span>
+        <span class="decorative-star" style="bottom: 30%; left: 15%;">♪</span>
+
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>
+                        AI Made Simple for
+                        <span class="highlight">Small Businesses</span>
+                    </h1>
+                    <p>
+                        Save time, save money, and stay ahead without the headache.
+                        No tech jargon — just solutions that work for your business.
+                    </p>
+
+                    <div class="value-props">
+                        <div class="value-card">
+                            <div class="value-icon">⏱</div>
+                            <div class="value-title">Save Time</div>
+                            <div class="value-subtitle">Automate repetitive tasks</div>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">💰</div>
+                            <div class="value-title">Save Money</div>
+                            <div class="value-subtitle">Cut operational costs</div>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">📈</div>
+                            <div class="value-title">Stay Ahead</div>
+                            <div class="value-subtitle">Keep competitive edge</div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#services" class="btn-primary">Explore AI Services</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="public/images/Mascot.png" alt="small-ai mascot" class="mascot animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>AI <span class="highlight">Services</span></h2>
+                <p style="font-size: 1.25rem; color: rgba(245, 230, 211, 0.8);">
+                    Choose the perfect AI workshop or consultation to transform your business
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="service-title">Online Tutorial</div>
+                        <div class="service-price">$99</div>
+                        <p class="service-description">
+                            Online Tutorial on AI and LLMs (ChatGPT, Claude, DeepSeek) and how they can benefit your business.
+                        </p>
+                        <ul class="service-features">
+                            <li>Introduction to AI and machine learning concepts</li>
+                            <li>Overview of popular AI tools (ChatGPT, Claude, DeepSeek)</li>
+                            <li>Real business use cases and examples</li>
+                            <li>Q&A session with AI expert</li>
+                            <li>30-day email support included</li>
+                        </ul>
+                        <a href="#" class="btn-service">Get Started</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="service-title">Purpose Built Agent Just for You</div>
+                        <div class="service-price">$299</div>
+                        <p class="service-description">
+                            Get a custom AI agent built specifically for your business challenges. No generic solutions.
+                        </p>
+                        <ul class="service-features">
+                            <li>Deep dive into your specific business pain points</li>
+                            <li>Custom AI agent designed and built for your needs</li>
+                            <li>Training on how to use and optimize your new agent</li>
+                            <li>Integration guidance for your existing workflows</li>
+                            <li>60-day support and refinement included</li>
+                        </ul>
+                        <a href="#" class="btn-service">Build My Agent</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="service-title">AI Audit & Consultation</div>
+                        <div class="service-price">$499</div>
+                        <p class="service-description">
+                            In-person audit, consultation, and a customized AI roadmap for your business.
+                        </p>
+                        <ul class="service-features">
+                            <li>Complete business process analysis</li>
+                            <li>AI opportunity identification</li>
+                            <li>Custom implementation roadmap</li>
+                            <li>ROI projections and timeline</li>
+                            <li>90-day follow-up support included</li>
+                        </ul>
+                        <a href="#" class="btn-service">Book Audit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">
+                        <img src="public/images/Mascot.png" alt="small-ai mascot" style="width: 48px; height: 48px;">
+                        <span class="font-display" style="font-size: 1.5rem; font-weight: 700;">small-ai</span>
+                    </div>
+                    <p class="footer-text">
+                        Making AI simple and accessible for small business owners.
+                        No tech jargon, just practical solutions that work.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">AI Solution Finder</a></li>
+                        <li><a href="#">Free Resources</a></li>
+                        <li><a href="#">About Mark</a></li>
+                        <li><a href="#">AI Chat</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@small-ai.com">info@small-ai.com</a></li>
+                        <li>Avalon</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 small-ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
