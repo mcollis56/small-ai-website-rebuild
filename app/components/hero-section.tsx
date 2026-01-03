@@ -22,6 +22,7 @@ const HeroSection = () => {
             src="/images/kitchen.jpg"
             alt="Professional business environment"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />

@@ -72,6 +72,7 @@ const BookingSection = () => {
                 src="/images/your6-.jpeg"
                 alt="Business consultation"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/50 to-transparent"></div>

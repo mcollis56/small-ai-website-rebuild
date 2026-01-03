@@ -81,6 +81,7 @@ const UseCaseGallery = () => {
                     src={useCase.image}
                     alt={useCase.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-[#0D0D0D]/40 group-hover:bg-[#0D0D0D]/20 transition-colors duration-300"></div>

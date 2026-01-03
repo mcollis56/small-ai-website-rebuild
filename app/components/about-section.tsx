@@ -15,6 +15,7 @@ const AboutSection = () => {
                 src="/images/your6-.jpeg"
                 alt="Mark Collis - AI Action Figure"
                 fill
+                sizes="(max-width: 768px) 100vw, 320px"
                 className="object-contain"
               />
             </div>
