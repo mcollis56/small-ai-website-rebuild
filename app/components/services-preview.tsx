@@ -3,6 +3,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import PaymentWidget from './payment-widget';
 import {
   Bot,
@@ -231,13 +232,13 @@ const ServicesPreview = () => {
             Download our free guides and take the AI readiness quiz to discover
             which solutions are perfect for your business.
           </p>
-          <a
+          <Link
             href="/resources"
             className="bg-[#0D0D0D] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#0D0D0D]/90 transition-colors inline-flex items-center space-x-2"
           >
             <span>Access Free Resources</span>
             <ArrowRight size={18} />
-          </a>
+          </Link>
         </div>
       </div>
 

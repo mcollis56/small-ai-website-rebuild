@@ -12,7 +12,7 @@ const AboutSection = () => {
           <div className="flex justify-center">
             <div className="relative w-80 h-96">
               <Image
-                src="/images/your6-.jpeg"
+                src="/images/Mascot.png"
                 alt="Mark Collis - AI Action Figure"
                 fill
                 sizes="(max-width: 768px) 100vw, 320px"

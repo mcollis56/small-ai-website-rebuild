@@ -20,6 +20,14 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleBookingClick = () => {
+    if (typeof window !== 'undefined' && !(window as any).Cal) {
+      // Fallback if Cal.com not loaded
+      window.open('https://cal.com/mark-s28jyk/book-a-discovery-call', '_blank');
+    }
+    // Otherwise Cal.com handles via data attributes
+  };
+
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'AI Solution Finder', href: '/ai-solution-finder' },
@@ -57,8 +65,9 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button 
+            <button
               className="btn-primary"
+              onClick={handleBookingClick}
               data-cal-namespace=""
               data-cal-link="mark-s28jyk/book-a-discovery-call"
               data-cal-config='{"layout":"month_view"}'
@@ -96,7 +105,10 @@ const Header = () => {
               ))}
               <div className="pt-4">
                 <button
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    handleBookingClick();
+                  }}
                   className="btn-primary w-full text-center block"
                   data-cal-namespace=""
                   data-cal-link="mark-s28jyk/book-a-discovery-call"

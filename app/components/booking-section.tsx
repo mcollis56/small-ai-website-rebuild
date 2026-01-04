@@ -6,6 +6,13 @@ import Image from 'next/image';
 import { Calendar, MessageCircle, Star } from 'lucide-react';
 
 const BookingSection = () => {
+  const handleBookingClick = () => {
+    if (typeof window !== 'undefined' && !(window as any).Cal) {
+      // Fallback if Cal.com not loaded
+      window.open('https://cal.com/mark-s28jyk/book-a-discovery-call', '_blank');
+    }
+    // Otherwise Cal.com handles via data attributes
+  };
 
   return (
     <section className="py-20 bg-[#0D0D0D]">
@@ -50,6 +57,7 @@ const BookingSection = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button
+                onClick={handleBookingClick}
                 className="bg-[#0D0D0D] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#0D0D0D]/90 transition-colors flex items-center justify-center space-x-2"
                 data-cal-namespace=""
                 data-cal-link="mark-s28jyk/book-a-discovery-call"
@@ -69,11 +77,11 @@ const BookingSection = () => {
           <div className="relative">
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/your6-.jpeg"
-                alt="Business consultation"
+                src="/images/Mascot.png"
+                alt="Mark Collis - AI Action Hero"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-contain bg-[#1A1A1A]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/50 to-transparent"></div>
             </div>

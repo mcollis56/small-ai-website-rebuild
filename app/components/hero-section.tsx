@@ -30,6 +30,21 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Decorative Mascot - positioned right */}
+      <div className="absolute right-4 bottom-16 z-10 hidden lg:block pointer-events-none">
+        <div className="relative w-[416px] h-[500px] opacity-90">
+          <Image
+            src="/images/Mascot.png"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 416px"
+            className="object-contain object-bottom"
+            style={{ background: 'transparent' }}
+            priority
+          />
+        </div>
+      </div>
+
       {/* Content */}
       <div className="relative z-10 container-custom">
         <div className="max-w-4xl">

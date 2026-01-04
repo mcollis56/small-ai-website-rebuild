@@ -2,9 +2,13 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Download, FileText, HelpCircle, Star, BookOpen, Lightbulb } from 'lucide-react';
 
 const ResourcesPage = () => {
+  const router = useRouter();
+
   const resources = [
     {
       id: 'ai-guide',
@@ -52,12 +56,40 @@ const ResourcesPage = () => {
   };
 
   const handleQuiz = () => {
-    window.location.href = '/quiz';
+    router.push('/quiz');
   };
 
   return (
-    <div className="py-20 bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A]">
-      <div className="container-custom">
+    <div className="relative py-20 bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A] overflow-hidden">
+      {/* Decorative Resource Icon - top right */}
+      <div className="absolute -right-8 top-4 opacity-15 pointer-events-none hidden lg:block">
+        <div className="relative w-[333px] h-[333px]">
+          <Image
+            src="/images/icon_resource.png"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 333px"
+            className="object-contain"
+            style={{ background: 'transparent' }}
+          />
+        </div>
+      </div>
+
+      {/* Decorative Resource Icon - bottom left */}
+      <div className="absolute -left-4 bottom-24 opacity-10 pointer-events-none hidden lg:block">
+        <div className="relative w-[250px] h-[250px]">
+          <Image
+            src="/images/icon_resource.png"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 250px"
+            className="object-contain"
+            style={{ background: 'transparent' }}
+          />
+        </div>
+      </div>
+
+      <div className="relative z-10 container-custom">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -146,18 +178,18 @@ const ResourcesPage = () => {
             Book a consultation to get customized AI recommendations for your specific business needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="bg-[#0D0D0D] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#0D0D0D]/90 transition-colors"
             >
               Book Free Consultation
-            </a>
-            <a 
-              href="/services" 
+            </Link>
+            <Link
+              href="/services"
               className="bg-white text-[#0D0D0D] px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors border-2 border-[#0D0D0D]"
             >
               View AI Services
-            </a>
+            </Link>
           </div>
         </div>
       </div>

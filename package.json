@@ -14,6 +14,7 @@
   "dependencies": {
     "@ai-sdk/openai": "^2.0.32",
     "@calcom/embed-react": "^1.5.3",
+    "@clerk/nextjs": "^6.36.5",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "ai": "^5.0.48",
@@ -33,9 +34,10 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.0",
+    "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^20.0.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.23",
     "eslint": "^9.0.0",
     "eslint-config-next": "15.5.3",

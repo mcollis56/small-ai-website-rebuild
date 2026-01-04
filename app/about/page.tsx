@@ -47,8 +47,36 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="py-20">
-      <div className="container-custom">
+    <div className="relative py-20 overflow-hidden">
+      {/* Decorative About Icon - top left */}
+      <div className="absolute -left-12 top-16 opacity-10 pointer-events-none hidden lg:block">
+        <div className="relative w-[374px] h-[374px]">
+          <Image
+            src="/images/icon_about.png"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 374px"
+            className="object-contain"
+            style={{ background: 'transparent' }}
+          />
+        </div>
+      </div>
+
+      {/* Decorative About Icon - bottom right */}
+      <div className="absolute -right-8 bottom-40 opacity-10 pointer-events-none hidden lg:block">
+        <div className="relative w-[290px] h-[290px]">
+          <Image
+            src="/images/icon_about.png"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 290px"
+            className="object-contain"
+            style={{ background: 'transparent' }}
+          />
+        </div>
+      </div>
+
+      <div className="relative z-10 container-custom">
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
@@ -76,9 +104,10 @@ const AboutPage = () => {
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-80 aspect-[3/4] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/images/mark-collis-portrait.jpg"
+                src="/images/Mascot.png"
                 alt="Mark Collis - AI Consultant for Small Businesses Action Figure"
                 fill
+                sizes="(max-width: 768px) 100vw, 320px"
                 className="object-contain bg-white"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/10 to-transparent"></div>

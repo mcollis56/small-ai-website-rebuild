@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/app/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/components/ui/card";
 import { ArrowRight } from "lucide-react";
@@ -9,8 +11,36 @@ export default function AISolutionFinderPage() {
   const { openCalPopup } = useCal();
 
   return (
-    <div className="min-h-screen bg-background">
-      <section className="py-20 px-4">
+    <div className="relative min-h-screen bg-background overflow-hidden">
+      {/* Decorative AI Solution Icon - top right */}
+      <div className="absolute -right-12 top-8 opacity-15 pointer-events-none hidden lg:block">
+        <div className="relative w-[374px] h-[374px]">
+          <Image
+            src="/images/icon_ai_solution.png"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 374px"
+            className="object-contain"
+            style={{ background: 'transparent' }}
+          />
+        </div>
+      </div>
+
+      {/* Decorative AI Solution Icon - bottom left */}
+      <div className="absolute -left-8 bottom-12 opacity-10 pointer-events-none hidden lg:block">
+        <div className="relative w-[290px] h-[290px]">
+          <Image
+            src="/images/icon_ai_solution.png"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 290px"
+            className="object-contain"
+            style={{ background: 'transparent' }}
+          />
+        </div>
+      </div>
+
+      <section className="relative z-10 py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-semibold font-serif leading-tight tracking-tight mb-6">
             Find Your Perfect AI Solution
@@ -65,12 +95,11 @@ export default function AISolutionFinderPage() {
             <p className="text-base leading-relaxed text-muted-foreground mb-8">
               Browse our services to find the perfect AI solution for your business.
             </p>
-            <Button
-              onClick={() => window.location.href = '/services'}
-              className="btn-secondary px-6 py-3"
-            >
-              View All Services
-            </Button>
+            <Link href="/services">
+              <Button className="btn-secondary px-6 py-3">
+                View All Services
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
