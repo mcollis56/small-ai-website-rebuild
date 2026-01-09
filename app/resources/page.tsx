@@ -15,7 +15,7 @@ const ResourcesPage = () => {
       title: 'Demystifying AI',
       description: 'Get to know the basics and how it can help your business',
       type: 'Free Guide',
-      image: 'https://static.vecteezy.com/system/resources/previews/038/989/553/large_2x/ai-generated-craftsperson-working-in-a-pottery-workshop-shaping-clay-on-a-wheel-generated-by-ai-photo.jpg',
+      mascotIcon: '/images/icon_resource.png',
       file: '/resources/Home.pdf',
       icon: BookOpen,
       popular: true
@@ -25,7 +25,7 @@ const ResourcesPage = () => {
       title: 'How to Set Up a Basic AI Chatbot in 10 Minutes',
       description: 'Quick, easy steps for beginners',
       type: 'Free Sheet',
-      image: 'https://media.istockphoto.com/id/985130024/photo/professional-businessman-works-on-his-desktop-computer-uses-laptop-in-the-background-busy.jpg?s=1024x1024&w=is&k=20&c=6bw6PKhTwFWh113A2dS2T1VQY9zjVSQK4sWVCRjl1p8=',
+      mascotIcon: '/images/icon_chat.png',
       file: '/resources/How-to-Set-Up-a-Basic-AI-Chatbot-in-10-Minutes.pdf',
       icon: FileText,
       popular: true
@@ -35,7 +35,7 @@ const ResourcesPage = () => {
       title: 'Are You Ready for AI?',
       description: 'Discover which AI solutions match your business needs',
       type: 'Free Quiz',
-      image: 'https://thumbs.dreamstime.com/z/futuristic-dashboard-user-interface-technology-infographic-network-data-screen-diagram-graph-chart-digital-ui-panel-203989014.jpg',
+      mascotIcon: '/images/icon_ai_solution.png',
       file: null, // Quiz is interactive, not a download
       icon: Lightbulb,
       popular: false
@@ -61,34 +61,6 @@ const ResourcesPage = () => {
 
   return (
     <div className="relative py-20 bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A] overflow-hidden">
-      {/* Decorative Resource Icon - top right */}
-      <div className="absolute -right-8 top-4 opacity-15 pointer-events-none hidden lg:block">
-        <div className="relative w-[333px] h-[333px]">
-          <Image
-            src="/images/icon_resource.png"
-            alt=""
-            fill
-            sizes="(max-width: 768px) 100vw, 333px"
-            className="object-contain"
-            style={{ background: 'transparent' }}
-          />
-        </div>
-      </div>
-
-      {/* Decorative Resource Icon - bottom left */}
-      <div className="absolute -left-4 bottom-24 opacity-10 pointer-events-none hidden lg:block">
-        <div className="relative w-[250px] h-[250px]">
-          <Image
-            src="/images/icon_resource.png"
-            alt=""
-            fill
-            sizes="(max-width: 768px) 100vw, 250px"
-            className="object-contain"
-            style={{ background: 'transparent' }}
-          />
-        </div>
-      </div>
-
       <div className="relative z-10 container-custom">
         {/* Header */}
         <div className="text-center mb-16">
@@ -115,14 +87,17 @@ const ResourcesPage = () => {
               )}
               
               {/* Image Section */}
-              <div className="relative h-48 bg-gray-100 overflow-hidden">
-                <Image
-                  src={resource.image}
-                  alt={resource.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-300"></div>
+              <div className="relative h-72 bg-gradient-to-br from-[#FFE36E]/20 via-[#FFE36E]/10 to-transparent overflow-hidden flex items-center justify-center">
+                <div className="relative w-full h-full group-hover:scale-105 transition-all duration-300 p-2">
+                  <Image
+                    src={resource.mascotIcon}
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    className="object-contain"
+                    style={{ background: 'transparent' }}
+                  />
+                </div>
               </div>
 
               {/* Content Section */}

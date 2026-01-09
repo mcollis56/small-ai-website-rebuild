@@ -11,7 +11,7 @@ const ResourcesSection = () => {
       description: 'Get to know the basics and how it can help your business.',
       cta: 'Download Now',
       detail: 'to transform your business operations.',
-      image: '/images/kitchen.jpg',
+      icon: '/images/icon_resource.png',
       link: '/resources',
     },
     {
@@ -20,7 +20,7 @@ const ResourcesSection = () => {
       description: 'Quick, easy steps for beginners.',
       cta: 'Get your first',
       detail: 'AI tool running today!',
-      image: '/images/your6-.jpeg',
+      icon: '/images/icon_chat.png',
       link: '/resources',
     },
     {
@@ -29,7 +29,7 @@ const ResourcesSection = () => {
       description: 'Discover which AI solutions match your business needs.',
       cta: 'Take the quiz',
       detail: 'to find your perfect starting point.',
-      image: '/images/barber.jpg',
+      icon: '/images/icon_ai_solution.png',
       link: '/ai-solution-finder',
     },
   ];
@@ -52,14 +52,17 @@ const ResourcesSection = () => {
               key={resource.title}
               className="bg-[#1A1A1A] rounded-lg overflow-hidden border border-gray-800 hover:border-[#5B5FC7] transition-all duration-300"
             >
-              <div className="relative h-64">
-                <Image
-                  src={resource.image}
-                  alt={resource.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                />
+              <div className="relative h-72 bg-gradient-to-br from-[#FFE36E]/10 to-transparent flex items-center justify-center">
+                <div className="relative w-full h-full p-2">
+                  <Image
+                    src={resource.icon}
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    className="object-contain"
+                    style={{ background: 'transparent' }}
+                  />
+                </div>
               </div>
 
               <div className="p-6">

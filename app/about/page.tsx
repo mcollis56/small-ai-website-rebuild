@@ -48,34 +48,6 @@ const AboutPage = () => {
 
   return (
     <div className="relative py-20 overflow-hidden">
-      {/* Decorative About Icon - top left */}
-      <div className="absolute -left-12 top-16 opacity-10 pointer-events-none hidden lg:block">
-        <div className="relative w-[374px] h-[374px]">
-          <Image
-            src="/images/icon_about.png"
-            alt=""
-            fill
-            sizes="(max-width: 768px) 100vw, 374px"
-            className="object-contain"
-            style={{ background: 'transparent' }}
-          />
-        </div>
-      </div>
-
-      {/* Decorative About Icon - bottom right */}
-      <div className="absolute -right-8 bottom-40 opacity-10 pointer-events-none hidden lg:block">
-        <div className="relative w-[290px] h-[290px]">
-          <Image
-            src="/images/icon_about.png"
-            alt=""
-            fill
-            sizes="(max-width: 768px) 100vw, 290px"
-            className="object-contain"
-            style={{ background: 'transparent' }}
-          />
-        </div>
-      </div>
-
       <div className="relative z-10 container-custom">
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">

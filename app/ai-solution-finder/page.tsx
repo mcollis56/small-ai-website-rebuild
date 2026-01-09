@@ -12,34 +12,6 @@ export default function AISolutionFinderPage() {
 
   return (
     <div className="relative min-h-screen bg-background overflow-hidden">
-      {/* Decorative AI Solution Icon - top right */}
-      <div className="absolute -right-12 top-8 opacity-15 pointer-events-none hidden lg:block">
-        <div className="relative w-[374px] h-[374px]">
-          <Image
-            src="/images/icon_ai_solution.png"
-            alt=""
-            fill
-            sizes="(max-width: 768px) 100vw, 374px"
-            className="object-contain"
-            style={{ background: 'transparent' }}
-          />
-        </div>
-      </div>
-
-      {/* Decorative AI Solution Icon - bottom left */}
-      <div className="absolute -left-8 bottom-12 opacity-10 pointer-events-none hidden lg:block">
-        <div className="relative w-[290px] h-[290px]">
-          <Image
-            src="/images/icon_ai_solution.png"
-            alt=""
-            fill
-            sizes="(max-width: 768px) 100vw, 290px"
-            className="object-contain"
-            style={{ background: 'transparent' }}
-          />
-        </div>
-      </div>
-
       <section className="relative z-10 py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-semibold font-serif leading-tight tracking-tight mb-6">

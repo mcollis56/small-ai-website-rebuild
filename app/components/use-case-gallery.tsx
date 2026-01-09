@@ -36,21 +36,18 @@ const UseCaseGallery = () => {
     {
       icon: Scissors,
       title: 'Barber Shop',
-      image: '/images/barber.jpg',
       description: 'Automate appointment booking, send reminder texts, and manage customer preferences with AI.',
       benefits: ['24/7 booking', 'Automated reminders', 'Customer insights']
     },
     {
       icon: Flower,
       title: 'Florist Business',
-      image: '/images/florist.jpg',
       description: 'Generate seasonal content, manage inventory alerts, and create personalized flower recommendations.',
       benefits: ['Content creation', 'Inventory management', 'Personalization']
     },
     {
       icon: Wrench,
       title: 'Plumber Services',
-      image: '/images/plumber.jpg',
       description: 'Schedule emergency calls, generate service quotes, and maintain customer service history.',
       benefits: ['Emergency scheduling', 'Quote generation', 'Service tracking']
     }
@@ -76,15 +73,17 @@ const UseCaseGallery = () => {
               className="use-case-item scroll-animation group"
             >
               <div className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="relative h-48">
-                  <Image
-                    src={useCase.image}
-                    alt={useCase.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-[#0D0D0D]/40 group-hover:bg-[#0D0D0D]/20 transition-colors duration-300"></div>
+                <div className="relative h-48 bg-gradient-to-br from-[#FFE36E]/20 via-[#FFE36E]/10 to-transparent flex items-center justify-center p-6">
+                  <div className="relative w-40 h-40">
+                    <Image
+                      src="/images/Mascot.png"
+                      alt=""
+                      fill
+                      sizes="160px"
+                      className="object-contain"
+                      style={{ background: 'transparent' }}
+                    />
+                  </div>
                   <div className="absolute top-4 left-4 bg-[#FFE36E] p-2 rounded-full">
                     <useCase.icon className="text-[#0D0D0D]" size={20} />
                   </div>

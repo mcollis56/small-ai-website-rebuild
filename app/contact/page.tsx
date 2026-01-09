@@ -9,34 +9,6 @@ const ContactPage = () => {
 
   return (
     <div className="relative py-20 overflow-hidden">
-      {/* Decorative Contact Icon - top right */}
-      <div className="absolute -right-12 top-8 opacity-15 pointer-events-none hidden lg:block">
-        <div className="relative w-[374px] h-[374px]">
-          <Image
-            src="/images/icon_contact.png"
-            alt=""
-            fill
-            sizes="(max-width: 768px) 100vw, 374px"
-            className="object-contain"
-            style={{ background: 'transparent' }}
-          />
-        </div>
-      </div>
-
-      {/* Decorative Contact Icon - bottom left */}
-      <div className="absolute -left-8 bottom-24 opacity-10 pointer-events-none hidden lg:block">
-        <div className="relative w-[290px] h-[290px]">
-          <Image
-            src="/images/icon_contact.png"
-            alt=""
-            fill
-            sizes="(max-width: 768px) 100vw, 290px"
-            className="object-contain"
-            style={{ background: 'transparent' }}
-          />
-        </div>
-      </div>
-
       <div className="relative z-10 container-custom">
         {/* Header */}
         <div className="text-center mb-16">

@@ -14,31 +14,16 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <div className="relative w-full h-full">
-          <Image
-            src="/images/kitchen.jpg"
-            alt="Professional business environment"
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-[#0D0D0D]/70"></div>
-        </div>
-      </div>
-
-      {/* Decorative Mascot - positioned right */}
-      <div className="absolute right-4 bottom-16 z-10 hidden lg:block pointer-events-none">
-        <div className="relative w-[416px] h-[500px] opacity-90">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-[#0D0D0D] via-[#1A1A1A] to-[#0D0D0D] overflow-hidden">
+      {/* Hero Mascot - positioned right */}
+      <div className="absolute right-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block pointer-events-none">
+        <div className="relative w-[500px] h-[600px]">
           <Image
             src="/images/Mascot.png"
             alt=""
             fill
-            sizes="(max-width: 768px) 100vw, 416px"
-            className="object-contain object-bottom"
+            sizes="(max-width: 768px) 100vw, 500px"
+            className="object-contain"
             style={{ background: 'transparent' }}
             priority
           />
