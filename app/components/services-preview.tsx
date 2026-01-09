@@ -61,6 +61,7 @@ const ServicesPreview = () => {
         '30-day email support included'
       ],
       popular: true,
+      comingSoon: true,
       calComUrl: 'https://cal.com/mark-s28jyk/discovery-call'
     },
     {
@@ -140,6 +141,11 @@ const ServicesPreview = () => {
                 <div className="absolute z-10 top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold flex items-center space-x-1 text-white" style={{ backgroundColor: '#c96a3b' }}>
                   <Star size={14} />
                   <span>Popular</span>
+                </div>
+              )}
+              {service.comingSoon && (
+                <div className="absolute z-10 top-4 right-4 px-3 py-1 rounded-full text-sm font-semibold bg-[#FFE36E] text-[#0D0D0D]">
+                  Coming Soon
                 </div>
               )}
 

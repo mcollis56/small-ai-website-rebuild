@@ -37,9 +37,12 @@ const Header = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  // Always show dark background on non-home pages or when scrolled
+  const showDarkBg = scrolled || pathname !== '/';
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-[#0D0D0D]/95 backdrop-blur-md' : 'bg-transparent'
+      showDarkBg ? 'bg-[#0D0D0D]/95 backdrop-blur-md' : 'bg-transparent'
     }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
