@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -50,7 +49,7 @@ const ServicesPreview = () => {
       price: 99,
       duration: '2 hours',
       format: 'Online',
-      image: 'https://static.vecteezy.com/system/resources/previews/030/196/779/large_2x/group-of-happy-diverse-business-people-professional-career-office-team-generative-ai-photo.jpg',
+      image: '/images/icon_resource.png',
       description: 'Online Tutorial on AI and LLMs (ChatGPT, Claude, DeepSeek) and how they can benefit your business.',
       features: [
         'Introduction to AI and machine learning concepts',
@@ -71,7 +70,7 @@ const ServicesPreview = () => {
       price: 299,
       duration: '3-4 hours',
       format: 'Online + Follow-up',
-      image: 'https://img.freepik.com/premium-photo/3d-rendering-humanoid-robot-working-with-laptop-computer-modern-office-room_934652-3697.jpg',
+      image: '/images/icon_ai_solution.png',
       description: 'Get a custom AI agent built specifically for your business challenges. No generic solutions - just a tailored AI assistant that understands your unique needs and solves your specific problems.',
       features: [
         'Deep dive into your specific business pain points',
@@ -91,7 +90,7 @@ const ServicesPreview = () => {
       price: 499,
       duration: '3-4 hours',
       format: 'In-person',
-      image: 'https://thumbs.dreamstime.com/b/business-team-analyzing-data-charts-modern-office-meeting-business-team-analyzing-data-charts-modern-office-meeting-343579857.jpg',
+      image: '/images/icon_about.png',
       description: 'In-person audit, consultation, and a customized AI roadmap for your business.',
       features: [
         'Complete business process analysis',
@@ -149,16 +148,17 @@ const ServicesPreview = () => {
                 </div>
               )}
 
-              {/* Image Section */}
-              <div className="relative h-48 bg-gray-100 overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-300"></div>
+              {/* Image Section - Dark background for character icons */}
+              <div className="relative h-56 bg-[#0D0D0D] overflow-hidden flex items-center justify-center">
+                <div className="relative w-48 h-48 group-hover:scale-110 transition-transform duration-300">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    sizes="192px"
+                    className="object-contain"
+                  />
+                </div>
               </div>
 
               {/* Content Section */}
