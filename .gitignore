@@ -39,3 +39,5 @@ public/uploads/
 media/
 
 .vercel
+.env*.local
+.aider*

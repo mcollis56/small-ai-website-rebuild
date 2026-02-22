@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Clock, DollarSign, TrendingUp } from 'lucide-react';
+import { ArrowRight, ChevronDown, Clock, DollarSign, TrendingUp } from 'lucide-react';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -110,6 +110,15 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Scroll Down Indicator */}
+      <button
+        onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-[#FFE36E] opacity-70 hover:opacity-100 transition-opacity cursor-pointer"
+        aria-label="Scroll to services"
+      >
+        <ChevronDown size={48} />
+      </button>
     </section>
   );
 };

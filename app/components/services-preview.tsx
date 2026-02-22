@@ -1,13 +1,9 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import PaymentWidget from './payment-widget';
 import {
   Bot,
-  MessageSquare,
-  PenTool,
   Search,
   Check,
   ArrowRight,
@@ -20,10 +16,6 @@ import {
 } from 'lucide-react';
 
 const ServicesPreview = () => {
-  const [selectedService, setSelectedService] = useState<string | null>(null);
-  const [showPayment, setShowPayment] = useState(false);
-  const [currentPaymentService, setCurrentPaymentService] = useState<any>(null);
-
   const handleBooking = () => {
     // Try to open Cal.com modal programmatically
     if (typeof window !== 'undefined') {
@@ -61,7 +53,8 @@ const ServicesPreview = () => {
       ],
       popular: true,
       comingSoon: true,
-      calComUrl: 'https://cal.com/mark-s28jyk/discovery-call'
+      calComUrl: 'https://cal.com/mark-s28jyk/discovery-call',
+      stripeUrl: 'https://buy.stripe.com/28EfZhextg9M3Sx1i808g00'
     },
     {
       id: 'purpose-built-agent',
@@ -81,7 +74,8 @@ const ServicesPreview = () => {
         '60-day support and refinement included'
       ],
       popular: true,
-      calComUrl: 'https://cal.com/mark-s28jyk/discovery-call'
+      calComUrl: 'https://cal.com/mark-s28jyk/discovery-call',
+      stripeUrl: 'https://buy.stripe.com/7sY6oH3SPbTwcp3f8Y08g02'
     },
     {
       id: 'consultation',
@@ -101,22 +95,13 @@ const ServicesPreview = () => {
         '90-day follow-up support included'
       ],
       popular: false,
-      calComUrl: 'https://cal.com/mark-s28jyk/discovery-call'
+      calComUrl: 'https://cal.com/mark-s28jyk/discovery-call',
+      stripeUrl: 'https://buy.stripe.com/dRm00j7518Hk3Sx4uk08g01'
     }
   ];
 
-  const handlePayment = (service: any) => {
-    setCurrentPaymentService(service);
-    setShowPayment(true);
-  };
-
-  const closePayment = () => {
-    setShowPayment(false);
-    setCurrentPaymentService(null);
-  };
-
   return (
-    <div className="py-20 bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A]">
+    <div id="services" className="py-20 bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A]">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
@@ -215,14 +200,16 @@ const ServicesPreview = () => {
                       <span>Book Now</span>
                     </button>
                   )}
-                  <button
-                    onClick={() => handlePayment(service)}
+                  <a
+                    href={service.stripeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`${service.id === 'ai-basics' ? 'w-full' : 'flex-1'} text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2`}
                     style={{ backgroundColor: '#c96a3b' }}
                   >
                     <CreditCard size={18} />
                     <span>Pay Now</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -248,14 +235,6 @@ const ServicesPreview = () => {
         </div>
       </div>
 
-      {/* Payment Widget */}
-      {currentPaymentService && (
-        <PaymentWidget
-          isOpen={showPayment}
-          onClose={closePayment}
-          service={currentPaymentService}
-        />
-      )}
     </div>
   );
 };
