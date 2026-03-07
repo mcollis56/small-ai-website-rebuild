@@ -76,7 +76,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="text-[#BDBDBD] text-sm">
-            © {new Date().getFullYear()} small-ai. All rights reserved.
+            small-ai is a product of Air Message Pty Ltd (ABN 35617317576) | © {new Date().getFullYear()} | All rights reserved.
           </p>
         </div>
       </div>
